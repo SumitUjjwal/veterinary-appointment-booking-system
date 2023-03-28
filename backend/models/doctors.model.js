@@ -27,6 +27,7 @@ const doctorSchema = mongoose.Schema({
     phone: { type: Number, required: true },
     address: { type: String, required: true },
     fees: { type: Number, required: true },
+    password: { type: String, required: true}
 });
 
 const DoctorModel = mongoose.model("doctor", doctorSchema);
