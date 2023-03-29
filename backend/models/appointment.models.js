@@ -23,13 +23,14 @@
 const mongoose = require("mongoose");
 
 const appointmentSchema = mongoose.Schema({
-    DoctorId: {type: String, required: true},
+    doctorId: {type: String, required: true},
     ownerName: {type: String, required: true},
     ownerEmail: {type: String, required: true},
     ownerPhone: {type: Number, required: true},
     petCategory: {type: String, required: true},
     petIssue: {type: String, required: true},
-    appointmentDate: {type: String, required: true}
+    appointmentDate: {type: String, required: true},
+    appointmentStatus: {type: String, required: true, default: 'pending'}
 });
 
 const AppointmentModel = mongoose.model("appointment", appointmentSchema);
