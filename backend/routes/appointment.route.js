@@ -1,9 +1,12 @@
 // create a new appointment 
 
-// --------------------External Modules --------------------------------
+// *************************EXTERNAL MODULES*************************
+
 const express = require('express');
 
-// --------------------Custom Module --------------------------------
+
+// *************************CUSTOM MODULES*************************
+
 const { AppointmentModel } = require("../models/appointment.models");
 
 
@@ -12,7 +15,9 @@ appointmentRouter.use(express.json());
 
 appointmentRouter.get("/", async(req,res) => {
     res.json({"msg": "Appointment Routes"});
-})
+});
+
+// *************************CREATE APPOINTMENT*************************
 
 appointmentRouter.post("/create", async (req, res) => {
     const { doctorId, ownerName, ownerEmail, ownerPhone, petCategory, petIssue, appointmentDate } = req.body;
@@ -24,9 +29,11 @@ appointmentRouter.post("/create", async (req, res) => {
         console.log(error);
         request.json({ "msg": "Error in creating appointment"});
     }
-})
+});
 
+
+// *************************EXPORT*************************
 
 module.exports = {
     appointmentRouter
-}
+};

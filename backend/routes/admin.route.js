@@ -5,21 +5,30 @@
 // remove a doctor
 // update a doctor info
 
-// --------------------External Modules --------------------------------
+// *******************EXTERNAL MODULES*******************
+
 const express = require('express');
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
-// --------------------Custom Module --------------------------------
+
+// *******************CUSTOM MODULES*******************
+
 const { AdminModel } = require("../models/admin.model");
 
 
 const adminRouter = express.Router();
 adminRouter.use(express.json());
 
+
+// *************************WELCOME*************************
+
 adminRouter.get("/", async (req, res) => {
     res.json({ "msg": "Admin Routes" });
-})
+});
+
+
+// *************************REGISTER*************************
 
 adminRouter.post("/register", async (req, res) => {
     const { first_name, last_name, email, phone, password } = req.body;
@@ -42,6 +51,9 @@ adminRouter.post("/register", async (req, res) => {
     }
 });
 
+
+// *************************LOGIN*************************
+
 adminRouter.post("/login", async (req, res) => {
     const { email, password } = req.body;
     try {
@@ -63,6 +75,9 @@ adminRouter.post("/login", async (req, res) => {
     }
 });
 
+
+// *************************EXPORT*************************
+
 module.exports = {
     adminRouter
-}
+};
