@@ -5,7 +5,7 @@
   font-family: 'Roboto', sans-serif;
   letter-spacing: 0.75px;
 }
-.navbar {
+.nvbr {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -15,47 +15,60 @@
     rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px,
     rgba(0, 0, 0, 0.07) 0px 16px 16px;
 }
-.navbar img {
+.nvbr img {
   width: 5%;
   transition: all 0.5s ease-in-out;
 }
-.navbar img:hover {
+.nvbr img:hover {
   transform: scale(1.05);
   transition: all 0.5s ease-in-out;
 }
-.navbar a {
+.nvbr a {
   font-size: 18px;
   cursor: pointer;
   padding: 10px 0;
   transition: all 0.5s ease-in-out;
   text-decoration: none;
   font-weight: 700;
+  color: rgba(0, 0, 0, 0.65);
 }
-.navbar a:nth-child(odd)::after {
+.nvbr a:nth-child(odd)::after {
   content: "";
   display: block;
   border-bottom: 3px solid #e15a53;
   width: 0;
   transition: all 0.5s ease-in-out;
 }
-.navbar a:nth-child(odd):hover {
+.nvbr a:nth-child(odd):hover {
   color: #e15a53;
   transition: all 0.5s ease-in-out;
 }
-.navbar a:nth-child(odd):hover::after {
+.nvbr a:nth-child(odd):hover::after {
   width: 100%;
 }
-.navbar a:nth-child(even)::after {
+.nvbr a:nth-child(even)::after {
   content: "";
   display: block;
   border-bottom: 3px solid #d9822b;
   width: 0;
   transition: all 0.5s ease-in-out;
 }
-.navbar a:nth-child(even):hover {
+.nvbr a:nth-child(even):hover {
   color: #d9822b;
   transition: all 0.5s ease-in-out;
 }
-.navbar a:nth-child(even):hover::after {
+.nvbr a:nth-child(even):hover::after {
   width: 100%;
+}
+.nvbr a:last-child {
+  background: linear-gradient(90deg ,#d9822b, #e15a53);
+  color: #fff;
+  padding: 6px 20px;
+}
+.nvbr a:last-child:hover {
+  background: linear-gradient(90deg, #e15a53, #d9822b);
+  color: #fff;
+}
+.nvbr a:last-child:hover::after {
+  width: 0%;
 }
