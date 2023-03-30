@@ -1,0 +1,186 @@
+body {
+    margin: 0px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .bgor{
+    background-color: #EB5E28;
+    color: #fff;
+    padding: 6px 16px;
+    border: 1px solid transparent;
+    transition: all 0.5s ease;
+    font-weight: 600;
+    font-size: 20px;
+    border-radius: 8px;
+    margin: 10px;
+  }
+  .bgor:hover {
+    background-color: #198754;
+    border: 1px solid transparent;
+    color: #fff;
+    transition: all 0.5s ease;
+  }
+  .txtor{
+    color: #EB5E28;
+  }
+
+  div .col-md-6 {
+    text-align: center;
+  }
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+  
+  .nav-link>p:hover{
+    color:#EB5E28
+  }
+  .nav-link>p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  
+  @media only screen and (min-width: 1100px) {
+    .navbtn{
+      margin-right: 5%;
+    }
+  
+  }
+  @media screen and (max-width: 1200px) {
+    .imgman{
+      display: none;
+    }
+  
+  }
+  .navbtn{
+    font-weight: bolder;
+    color: white;
+  }
+  @media only screen and (min-width: 990px) {
+    .navbtn{
+      width: 110px;
+      border-radius: 15px;
+    }
+    .nav-link>p{
+    position: relative;
+    width: max-content;
+    margin-right: 0px;
+    padding-right: 0px;
+    font-size: 25px;
+    letter-spacing: 1px;
+  
+  }
+  .nav-link>p::after{
+    content:'';
+    opacity: 0;
+    transition: all 0.4s;
+    height: 3px;
+    width: 100%;
+    background-color: orange;
+    position:absolute;
+    bottom: 0;
+    left: 0;
+  }
+    .nav-link>p:hover::after{
+    opacity: 0.5;
+  }
+  }
+  .adw{
+    width:75%;
+    overflow: hidden;
+  }
+  .cropversion{
+    scale: 1.2;
+  }
+  .heightman{
+    height: 23%;
+    overflow: hidden;
+    margin-top: -105px
+  }
+  .imgman{
+    top: 0;
+  }
+  .hoverorg{
+    background-color: black;
+  }
+  .hoverorg:hover{
+    background-color: #EB5E28;
+  }
+  
+  .bgyllow{
+    display: flex;
+    justify-content: space-evenly;
+    background-image: url("./components/imgsincom/kamkiimg.jpg");
+      background-repeat: no-repeat;
+        background-position: center;
+          background-size: cover;
+          height: auto;
+          padding-top: 5vh;
+          padding-bottom: 5vh;
+  }
+  .srjstr{
+    /* margin-left: 5vw; */
+    width: 80%;
+    /* border: 1px solid green; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .coupleholder{
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    height: 25vh;
+    width: 95%;
+    /* border: 1px solid yellow; */
+  
+  }
+  .srjcard{
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    height: 100%;
+    /* border: 1px solid blue; */
+    width: 40%;
+    background-color: white;
+    border-radius: 10px;
+  }
+  .srjcard:hover{
+    scale: 1.02;
+    transition: .2s ease-in-out;
+  }
+  .srjimgholder{
+    width: 100%;
+    height: 75%;
+    /* border: 1px solid red; */
+  }
+  .srjimgholder>img{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+  }
+  .srjcard>p{
+    width: 100%;
+    height: 25%;
+  }
+  .animalList p {
+    text-align: center;
+  }
+
+  
+  @media only screen and (max-width:1200px) {
+    .bgyllow{
+      display: none;
+    }
+  }
+
+  footer .text-uppercase{
+    color: #fff;
+  }
+  footer p, footer span ,footer a ,footer label, footer td  {
+    color: grey;
+  }
