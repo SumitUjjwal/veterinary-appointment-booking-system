@@ -10,7 +10,7 @@ const {adminRouter} = require("./routes/admin.route");
 const {doctorRouter} = require("./routes/doctors.route");
 const {authenticate} = require("./middleware/authentication.middleware");
 // ******************************VARIABLES******************************
-const PORT = process.env.port;
+const PORT = process.env.PORT;
 const app = express();
 
 app.use(cors());
@@ -22,8 +22,8 @@ app.get('/', (req, res) => {
     });
 });
 
-// app.use("/appointment", appointmentRouter);
-// app.use("/admin", adminRouter);
+app.use("/appointment", appointmentRouter);
+app.use("/admin", adminRouter);
 app.use(authenticate)
 app.use("/doctor",doctorRouter);
 
