@@ -84,24 +84,42 @@ adminRouter.post("/login", async (req, res) => {
 
 adminRouter.get("/doctors", async (req, res) => {
     const docId = req.query.docId;
-    if (docId) {
-        const doctor = await DoctorModel.findOne({ docId });
-        const appointments = await AppointmentModel.find({doctorId: docId});
-        if (doctor) {
-            res.json({ doctor, appointments });
+    try {
+        if (docId) {
+            const doctor = await DoctorModel.findOne({ id: docId });
+            const appointments = await AppointmentModel.find({ doctorId: docId });
+            if (doctor) {
+                res.json({ doctor, appointments });
+            }
+            else {
+                res.json({ "Error": "Invalid Doctor ID" });
+            }
         }
         else {
-            res.json({ "Error": "Invalid Doctor ID" });
+            const doctorList = await DoctorModel.find();
+            res.json({ doctorList });
         }
-    }
-    else {
-        const doctorList = await DoctorModel.find();
-        res.json({ doctorList });
+    } catch (error) {
+        console.log(error);
+        res.json({ "Error": error });
     }
 });
 
 adminRouter.get("/appointments", async (req, res) => {
-    
+    const appointmentId = req.query.appointmentId;
+    try {
+        if (appointmentId) {
+            const appointment = await AppointmentModel.findOne({ id: appointmentId });
+            res.json({ appointment });
+        }
+        else {
+            const appointments = await AppointmentModel.find();
+            res.json({ appointments });
+        }
+    } catch (error) {
+        console.log(error);
+        res.json({ "Error": error });
+    }
 })
 
 
