@@ -1,3 +1,5 @@
+// admin register
+// admin login
 // get all doctors info
 // get all appointments doctor wise
 // get appointment list
@@ -15,6 +17,8 @@ const jwt = require("jsonwebtoken");
 // *******************CUSTOM MODULES*******************
 
 const { AdminModel } = require("../models/admin.model");
+const { DoctorModel } = require("../models/doctors.model");
+const { AppointmentModel } = require("../models/appointment.models");
 
 
 const adminRouter = express.Router();
@@ -74,6 +78,66 @@ adminRouter.post("/login", async (req, res) => {
         res.json({ "msg": "Error while admin login", "error": error })
     }
 });
+
+
+// *************************DOCTORS LIST*************************
+
+adminRouter.get("/doctors", async (req, res) => {
+    const docId = req.query.docId;
+    try {
+        if (docId) {
+            const doctor = await DoctorModel.findOne({ id: docId });
+            const appointments = await AppointmentModel.find({ doctorId: docId });
+            if (doctor) {
+                res.json({ doctor, appointments });
+            }
+            else {
+                res.json({ "Error": "Invalid Doctor ID" });
+            }
+        }
+        else {
+            const doctorList = await DoctorModel.find();
+            res.json({ doctorList });
+        }
+    } catch (error) {
+        console.log(error);
+        res.json({ "Error": error });
+    }
+});
+
+
+// *************************APPOINTMENTS LIST*************************
+
+adminRouter.get("/appointments", async (req, res) => {
+    const appointmentId = req.query.appointmentId;
+    try {
+        if (appointmentId) {
+            const appointment = await AppointmentModel.findOne({ id: appointmentId });
+            res.json({ appointment });
+        }
+        else {
+            const appointments = await AppointmentModel.find();
+            res.json({ appointments });
+        }
+    } catch (error) {
+        console.log(error);
+        res.json({ "Error": error });
+    }
+})
+
+
+// // *************************ADD A NEW DOCTOR*************************
+
+// adminRouter.post("/addDoctor", async(req, res) => {
+
+// })
+
+
+// *************************UPDATE DOCTOR INFO*************************
+
+
+
+// *************************REMOVE A DOCTOR*************************
 
 
 // *************************EXPORT*************************
