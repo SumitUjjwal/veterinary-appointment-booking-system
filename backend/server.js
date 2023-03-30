@@ -7,9 +7,10 @@ const cors = require("cors");
 const { connection } = require("./config/db");
 const {appointmentRouter} = require("./routes/appointment.route");
 const {adminRouter} = require("./routes/admin.route");
-
+const {doctorRouter} = require("./routes/doctors.route");
+const {authenticate} = require("./middleware/authentication.middleware");
 // ******************************VARIABLES******************************
-const PORT = process.env.PORT;
+const PORT = process.env.port;
 const app = express();
 
 app.use(cors());
@@ -21,15 +22,16 @@ app.get('/', (req, res) => {
     });
 });
 
-app.use("/appointment", appointmentRouter);
-app.use("/admin", adminRouter);
-
+// app.use("/appointment", appointmentRouter);
+// app.use("/admin", adminRouter);
+app.use(authenticate)
+app.use("/doctor",doctorRouter);
 
 // *************************CONNECTION*************************
 
 app.listen(PORT, async () => {
     try {
-        await connection;
+        // await connection;
         console.log("Connected to Database");
         console.log(`Listening on ${PORT}`);
     } catch (error) {
