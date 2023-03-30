@@ -105,6 +105,9 @@ adminRouter.get("/doctors", async (req, res) => {
     }
 });
 
+
+// *************************APPOINTMENTS LIST*************************
+
 adminRouter.get("/appointments", async (req, res) => {
     const appointmentId = req.query.appointmentId;
     try {
@@ -121,6 +124,20 @@ adminRouter.get("/appointments", async (req, res) => {
         res.json({ "Error": error });
     }
 })
+
+
+// // *************************ADD A NEW DOCTOR*************************
+
+// adminRouter.post("/addDoctor", async(req, res) => {
+
+// })
+
+
+// *************************UPDATE DOCTOR INFO*************************
+
+
+
+// *************************REMOVE A DOCTOR*************************
 
 
 // *************************EXPORT*************************
