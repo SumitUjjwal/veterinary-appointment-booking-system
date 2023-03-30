@@ -39,3 +39,14 @@ module.exports = {
     DoctorModel
 };
 
+// {
+//     "first_name":"Shiva",
+//     "last_name":"Saraswat",
+//     "specialization":"Skin Disease",
+//     "experience":"5 years",
+//     "address": "Mathura Uttar Pradesh",
+//     "email":"shiva@gmail.com",
+//     "phone":8494249421,
+//     "fees":5000,
+//     "password":"shiva"
+//   }
