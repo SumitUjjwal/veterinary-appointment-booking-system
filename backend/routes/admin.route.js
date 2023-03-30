@@ -1,3 +1,5 @@
+// admin register
+// admin login
 // get all doctors info
 // get all appointments doctor wise
 // get appointment list
@@ -15,6 +17,8 @@ const jwt = require("jsonwebtoken");
 // *******************CUSTOM MODULES*******************
 
 const { AdminModel } = require("../models/admin.model");
+const { DoctorModel } = require("../models/doctors.model");
+const { AppointmentModel } = require("../models/appointment.models");
 
 
 const adminRouter = express.Router();
@@ -74,6 +78,31 @@ adminRouter.post("/login", async (req, res) => {
         res.json({ "msg": "Error while admin login", "error": error })
     }
 });
+
+
+// *************************DOCTORS LIST*************************
+
+adminRouter.get("/doctors", async (req, res) => {
+    const docId = req.query.docId;
+    if (docId) {
+        const doctor = await DoctorModel.findOne({ docId });
+        const appointments = await AppointmentModel.find({doctorId: docId});
+        if (doctor) {
+            res.json({ doctor, appointments });
+        }
+        else {
+            res.json({ "Error": "Invalid Doctor ID" });
+        }
+    }
+    else {
+        const doctorList = await DoctorModel.find();
+        res.json({ doctorList });
+    }
+});
+
+adminRouter.get("/appointments", async (req, res) => {
+    
+})
 
 
 // *************************EXPORT*************************
