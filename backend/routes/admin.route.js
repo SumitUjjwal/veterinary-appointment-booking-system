@@ -137,7 +137,14 @@ adminRouter.get("/appointments", async (req, res) => {
 
 adminRouter.patch("/updateDoctor/:id", async(req, res) => {
     const payload = req.body;
-
+    const id = req.params.id;
+    try {
+        const doctor = await DoctorModel.findByIdAndUpdate(id, payload);
+        res.json({"msg": `Doctor info associated with id: ${id} has been updated successfully`})
+    } catch (error) {
+        console.log(error);
+        res.json({"Error": error.message});
+    }
 });
 
 
