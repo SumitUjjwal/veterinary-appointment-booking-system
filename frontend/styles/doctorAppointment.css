@@ -1,23 +1,26 @@
-#Doctor_Appointment_form{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 30%;
-    justify-content: center;
-    /* align-items: center; */
-    margin: auto;
+#Doctor_Appointment_form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 30%;
+  justify-content: center;
+  /* align-items: center; */
+  margin: auto;
 }
-#heading{
-    text-align: center;
+#heading {
+  text-align: center;
+  margin: 40px 0px;
 }
-#submit_button{
-    width: 50%;
-    margin: auto;
+#submit_button {
+  width: 50%;
+  margin: auto;
 }
-input{
-    padding: 4px 10px;
-    border-radius: 5px;
+input,
+select {
+  padding: 4px 10px;
+  border-radius: 5px;
+  border: 1px solid;
 }
-header{
-    margin-bottom: 20px;
+header {
+  margin-bottom: 20px;
 }

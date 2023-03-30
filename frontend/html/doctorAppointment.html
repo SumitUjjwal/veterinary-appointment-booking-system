@@ -4,30 +4,53 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../styles/doctorAppointment.css">
-   <link rel="stylesheet" href="../styles/navbar.css">
-    
+    <link rel="stylesheet" href="../styles/doctorAppointment.css" />
+    <link rel="stylesheet" href="../styles/navbar.css" />
+    <link rel="stylesheet" href="../styles/alert.css" />
+    <script
+      src="https://kit.fontawesome.com/add05b7e25.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Doctor Appointment</title>
   </head>
   <body>
     <header></header>
+
     <h1 id="heading">Appoint Your Doctor</h1>
     <form id="Doctor_Appointment_form">
-        <label for="OwnerName">Owner Name</label>
-        <input type="text" id="OwnerName" placeholder="Your Name">
-        <label for="PetName">Pet Name</label>
-        <input type="text" id="PetName" placeholder="Your Pet Name">
-        <label for="email">Email</label>
-        <input type="email" id="email" placeholder="Your Email">
-        <label for="phone">Phone Number</label>
-        <input type="tel" id="phone" placeholder="Your Phone Number">
-        <label for="location">Your Location</label>
-        <input type="text" id="location" placeholder="Your Address">
-        <label for="date">Appointment Date</label>
-        <input type="date" id="date">
-        <label for="desc">Description</label>
-        <input type="text" id="desc" placeholder="Type other infomation here">
-        <input type="submit" id="submit_button" value="Submit">
+      <label for="OwnerName">Owner Name</label>
+      <input type="text" id="OwnerName" placeholder="Your Name" />
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Your Email" />
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" placeholder="Your Phone Number" />
+      <label for="PetCategory">Pet Category</label>
+      <select name="PetCategory" id="PetCategory">
+        <option value="Dog">Dog</option>
+        <option value="Cat">Cat</option>
+        <option value="Corokodile">Corokodile</option>
+        <option value="Fish">Fish</option>
+        <option value="Hamster">Hamster</option>
+        <option value="Bird">Bird</option>
+        <option value="Rabbit">Rabbit</option>
+        <option value="Lizard">Lizard</option>
+      </select>
+      <label for="PetIssue">Pet Issue</label>
+      <select name="PetIssue" id="PetIssue">
+        <option value="general">General Medical Question</option>
+        <option value="diarrhea">Diarrhea or bowel issues</option>
+        <option value="ear">Ear infection</option>
+        <option value="appetite">Loss of appetite</option>
+        <option value="throwing-up">Throwing up</option>
+        <option value="behavioural">Behavioural problems</option>
+        <option value="skin">Skin rash or allergy</option>
+        <option value="injury">Injury</option>
+        <option value="dental">Dental issues</option>
+        <option value="other">Other</option>
+      </select>
+      <label for="date">Appointment Date</label>
+      <input type="date" id="date" />
+      <input type="submit" id="submit_button" value="Submit" />
     </form>
   </body>
 </html>
