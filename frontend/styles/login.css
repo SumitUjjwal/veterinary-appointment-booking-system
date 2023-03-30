@@ -1,0 +1,54 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+main {
+    width: 30%;
+    margin: 150px auto 0 auto;
+    background-color: rgb(227, 227, 227);
+    padding: 40px;
+}
+
+#container {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#container h2 {
+    letter-spacing: 1px;
+    font-size: 26px;
+    margin: 10px 0;
+    font-weight: 600;
+}
+
+#container label {
+    margin: 10px 0;
+    font-size: 18x;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+#container input {
+    margin: 10px 0;
+    padding: 6px;
+    height: 26px;
+    font-size: 14px;
+}
+
+#container button {
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    border: none;
+    background: black;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+#container button:hover {
+    opacity: 0.7;
+}
