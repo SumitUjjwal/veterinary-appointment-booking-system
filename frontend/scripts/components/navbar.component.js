@@ -1,12 +1,12 @@
 const Navbar = () => {
   return `
   <div class="navbar">
-  <img src="../assets/images/Pet-Vet logo.png" alt="" />
-  <a href="#">Home</a>
+  <img id="logo" src="../assets/images/Pet-Vet logo.png" alt="" />
+  <a href="../index.html">Home</a>
   <a href="#">Category</a>
-  <a href="#">Appointment</a>
+  <a href="../html/doctorsdetails.html">Appointment</a>
   <a href="#">Doctor Apply</a>
-  <a href="#">DashBoard</a>
+  <a href="../html/dashboard.html">DashBoard</a>
 </div>`;
 };
 export default  Navbar ;
