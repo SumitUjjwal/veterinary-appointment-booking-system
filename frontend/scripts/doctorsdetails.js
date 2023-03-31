@@ -54,6 +54,7 @@ const append = (doctors) => {
 
         let booknow =document.createElement("button")
         booknow.innerText = "Book Now"
+        booknow.id ="booknow" 
 
         booknow.onclick = ()=>{
             if(element.slots>0){
