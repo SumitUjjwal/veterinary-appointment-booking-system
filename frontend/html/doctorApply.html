@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doc-Apply</title>
+    <link rel="stylesheet" href="../styles/doctorApply.css" />
+    <link rel="stylesheet" href="../styles/navbar.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <script src="../scripts/doctorApply.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="nvbr">
+        <img src="../assets/images/Pet-Vet logo.png" alt="" />
+        <a href="../index.html">Home</a>
+        <a href="../html/doctorsdetails.html">Appointment</a>
+        <a href="../html/doctorApply.html">Doctor Apply</a>
+        <a href="../html/dashboard.html">DashBoard</a>
+        <a href="../html/login.html">Login</a>
+      </div>
+    </header>
+    <main>
+      <div id="mainPage">
+        <h2><span>Doctor</span><span> Apply</span></h2>
+        <img src="https://jaldeevets.com/wp-content/uploads/2022/10/Vets-IGFB-1-1024x1024-1.webp" alt="">
+        <form id="applyBtnForm" action="">
+          <label>FirstName</label>
+          <input type="text" id="fname" required />
+          <label>LastName</label>
+          <input type="text" id="lname" required />
+          <label>Email</label>
+          <input type="email" id="email" required />
+          <label>Avatar URL</label>
+          <input type="text" id="avatar" required />
+          <label>Phone</label>
+          <input type="number" id="phone" required />
+          <label>Specialization</label>
+          <select id="specialization">
+            <option value=""></option>
+            <option value="smallAnimalMedicine">Small animal medicine</option>
+            <option value="largeAnimalMedicine">large animal medicine</option>
+            <option value="equineMedicine">Equine medicine</option>
+            <option value="exoticAnimalMedicine">Exotic animal medicine</option>
+            <option value="surgery">Surgery</option>
+            <option value="internalMedicine">Internal medicine</option>
+            <option value="dermatology">Dermatology</option>
+            <option value="oncology">Oncology</option>
+            <option value="cardiology">Cardiology</option>
+            <option value="neurology">Neurology</option>
+          </select>
+          <label>Fees</label>
+          <input type="text" id="fees" required />
+          <label>Experience</label>
+          <input type="text" id="experience" required />
+          <label>Address</label>
+          <input type="text" id="address" required />
+          <label>Create password</label>
+          <input type="password" id="password" required />
+          <input type="submit" id="applyBtn" value="Apply Now"></button>
+        </form>
+
+      </div>
+    </main>
+  </body>
+</html>
