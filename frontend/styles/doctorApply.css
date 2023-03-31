@@ -4,13 +4,11 @@
 }
 
 main {
-    width: 30%;
-    margin: 150px auto 0 auto;
-    background-color: rgb(227, 227, 227);
-    padding: 40px;
+    width: 40%;
+    margin: 70px auto;
 }
 
-#mainPage #loginDoc{
+#mainPage form{
     text-align: left;
     display: flex;
     flex-direction: column;
@@ -18,10 +16,21 @@ main {
 }
 
 #mainPage h2 {
+    /* text-align: center; */
     letter-spacing: 1px;
-    font-size: 26px;
+    font-size: 40px;
     margin: 10px 0;
     font-weight: 600;
+}
+#mainPage h2 span:first-child{
+    color: #d9822b;
+}
+#mainPage h2 span:last-child{
+    color: #e15a53;
+}
+
+#mainPage img {
+    width: 30%;
 }
 
 #mainPage label {
@@ -38,18 +47,26 @@ main {
     font-size: 14px;
 }
 
-#mainPage #signin-btn {
+#mainPage select {
+    margin: 10px 0;
+    padding: 6px;
+    height: 40px;
+    font-size: 14px;
+}
+
+#mainPage #applyBtn {
+    width: 100%;
     padding: 12px 20px;
     font-size: 18px;
     font-weight: 600;
     color: white;
     border: none;
-    background: black;
+    background: linear-gradient(90deg ,#d9822b, #e15a53);
     margin: 10px 0;
     cursor: pointer;
     height: 100%;
 }
 
-#mainPage #signin-btn:hover {
-    opacity: 0.7;
+#mainPage #applyBtn:hover {
+    background: linear-gradient(90deg, #e15a53, #d9822b);
 }

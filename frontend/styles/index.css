@@ -23,8 +23,22 @@ body {
     color: #fff;
     transition: all 0.5s ease;
   }
+  .navicons {
+    display: flex;
+    justify-content: space-evenly;
+  }
   .txtor{
     color: #EB5E28;
+  }
+  .logoimg {
+    width: 120px;
+    margin-left: 20px;
+  }
+  .marginbottom {
+    margin-bottom: 0;
+  }
+  .offer img{
+    height: 500px;
   }
 
   div .col-md-6 {
