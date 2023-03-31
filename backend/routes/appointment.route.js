@@ -17,6 +17,25 @@ appointmentRouter.get("/", async(req,res) => {
     res.json({"msg": "Appointment Routes"});
 });
 
+
+// *************************GET APPOINTMENT*************************
+
+appointmentRouter.get("/:id", async(req, res) => {
+    const id = req.params.id;
+    try {
+        const appointment = await AppointmentModel.findOne({id});
+        if(appointment){
+            res.json({appointment});
+        }
+        else{
+            res.json({"Error": "Invalid appointment id"});
+        }
+    } catch (error) {
+        console.log(error);
+        res.json({"Error": error.message});
+    }
+})
+
 // *************************CREATE APPOINTMENT*************************
 
 appointmentRouter.post("/create", async (req, res) => {
