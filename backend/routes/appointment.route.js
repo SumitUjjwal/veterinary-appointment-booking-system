@@ -57,7 +57,7 @@ appointmentRouter.get("/doctors", async (req, res) => {
     console.log("doctor")
     try {
         const doctors = await DoctorModel.find();
-        res.json({doctors});
+        res.json({ doctors });
     } catch (error) {
         console.log(error);
         res.json({ "Error": error });

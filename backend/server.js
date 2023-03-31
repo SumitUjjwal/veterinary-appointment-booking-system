@@ -5,11 +5,11 @@ const cors = require("cors");
 
 // ******************************CUSTOM MODULES******************************
 const { connection } = require("./config/db");
-const {appointmentRouter} = require("./routes/appointment.route");
-const {adminAuthRouter} = require("./routes/adminAuth.route");
-const {doctorRouter} = require("./routes/doctors.route");
-const {authenticate} = require("./middleware/authentication.middleware");
-const {adminRouter} = require("./routes/admin.route");
+const { appointmentRouter } = require("./routes/appointment.route");
+const { adminAuthRouter } = require("./routes/adminAuth.route");
+const { doctorRouter } = require("./routes/doctors.route");
+const { authenticate } = require("./middleware/authentication.middleware");
+const { adminRouter } = require("./routes/admin.route");
 
 // ******************************VARIABLES******************************
 const PORT = process.env.PORT;
@@ -26,7 +26,7 @@ app.get('/', (req, res) => {
 
 app.use("/appointment", appointmentRouter);
 app.use("/adminAuth", adminAuthRouter);
-app.use("/doctor",doctorRouter);
+app.use("/doctor", doctorRouter);
 app.use(authenticate);
 app.use("/admin", adminRouter);
 

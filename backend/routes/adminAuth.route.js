@@ -17,8 +17,6 @@ require("dotenv").config();
 // *******************CUSTOM MODULES*******************
 
 const { AdminModel } = require("../models/admin.model");
-const { DoctorModel } = require("../models/doctors.model");
-const { AppointmentModel } = require("../models/appointment.models");
 
 
 const SECRET = process.env.ADMIN_SECRET;
@@ -51,6 +49,7 @@ adminAuthRouter.post("/register", async (req, res) => {
                 res.json({ "msg": `${first_name} has been registered successfully!!` });
             }
             else {
+                console.log(err);
                 res.json({ "msg": err });
             }
         })
@@ -79,7 +78,7 @@ adminAuthRouter.post("/login", async (req, res) => {
         }
     } catch (error) {
         console.log(error);
-        res.json({ "msg": "Error while admin login", "error": error })
+        res.json({ "msg": "Error while admin login", "error": error });
     }
 });
 
