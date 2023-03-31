@@ -8,8 +8,6 @@ const authenticate = (req,res,next)=>{
             const DoctorID = decoded.DoctorID;
             console.log(decoded)
             req.body.DoctorID = DoctorID
-
- 
             next()
         }else{
             res.send("Please login first")
