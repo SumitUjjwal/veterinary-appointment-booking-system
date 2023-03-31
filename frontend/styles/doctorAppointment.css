@@ -6,6 +6,7 @@
   justify-content: center;
   /* align-items: center; */
   margin: auto;
+  margin-bottom: 20px;
 }
 #heading {
   text-align: center;
@@ -14,6 +15,23 @@
 #submit_button {
   width: 50%;
   margin: auto;
+  padding: 12px 20px;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  border: none;
+  background: linear-gradient(90deg ,#d9822b, #e15a53);
+  cursor: pointer;
+  height: 100%;
+}
+
+
+
+#submit_button:hover {
+  background: linear-gradient(90deg, #e15a53, #d9822b);
+}
+#submit_button:active {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 input,
 select {
