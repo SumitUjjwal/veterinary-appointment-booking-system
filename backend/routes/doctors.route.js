@@ -18,7 +18,7 @@ doctorRouter.get("/", async (req, res) => {
 })
 
 doctorRouter.post("/register", async (req, res) => {
-    const { first_name, last_name, specialization, experience, address, phone, fees, email, password } = req.body;
+    const { profile_img, first_name, last_name, specialization, experience, address, phone, fees, email, password } = req.body;
     try {
         let all_data = await DoctorModel.find({ email });
         if (all_data.length === 0) {
@@ -26,7 +26,7 @@ doctorRouter.post("/register", async (req, res) => {
                 if (err) {
                     res.send("login is not working")
                 } else {
-                    const Doctor = new DoctorModel({ first_name, last_name, specialization, experience, address, phone, fees, email, password: val });
+                    const Doctor = new DoctorModel({ profile_img, first_name, last_name, specialization, experience, address, phone, fees, email, password: val });
                     await Doctor.save();
                     res.send("Doctor registered Successfully");
                 }

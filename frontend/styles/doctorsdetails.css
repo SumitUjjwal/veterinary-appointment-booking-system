@@ -17,3 +17,8 @@ h1{
 header{
     margin-bottom: 20px;
 }
+
+.doctor_img img{
+    width: 80%;
+    height: 200px;
+}
