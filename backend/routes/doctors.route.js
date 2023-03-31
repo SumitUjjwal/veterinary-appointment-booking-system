@@ -27,16 +27,16 @@ doctorRouter.post("/register", async (req, res) => {
                     res.send("login is not working")
                 } else {
                     const Doctor = new DoctorModel({ first_name, last_name, specialization, experience, address, phone, fees, email, password: val });
-                    await Doctor.save()
-                    res.send("Doctor registered Successfully")
+                    await Doctor.save();
+                    res.send("Doctor registered Successfully");
                 }
             })
         } else {
-            res.send("Doctor already Regester")
+            res.send("Doctor already registered");
         }
     } catch (error) {
-        res.send("Error in registering the Doctor")
-        console.log(error)
+        res.send("Error in registering the Doctor");
+        console.log(error);
     }
 })
 
