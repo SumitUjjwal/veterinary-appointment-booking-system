@@ -6,9 +6,11 @@ const cors = require("cors");
 // ******************************CUSTOM MODULES******************************
 const { connection } = require("./config/db");
 const {appointmentRouter} = require("./routes/appointment.route");
-const {adminRouter} = require("./routes/admin.route");
+const {adminAuthRouter} = require("./routes/adminAuth.route");
 const {doctorRouter} = require("./routes/doctors.route");
 const {authenticate} = require("./middleware/authentication.middleware");
+const {adminRouter} = require("./routes/admin.route");
+
 // ******************************VARIABLES******************************
 const PORT = process.env.PORT;
 const app = express();
@@ -23,15 +25,17 @@ app.get('/', (req, res) => {
 });
 
 app.use("/appointment", appointmentRouter);
-app.use("/admin", adminRouter);
-app.use(authenticate)
+app.use("/adminAuth", adminAuthRouter);
 app.use("/doctor",doctorRouter);
+app.use(authenticate);
+app.use("/admin", adminRouter);
+
 
 // *************************CONNECTION*************************
 
 app.listen(PORT, async () => {
     try {
-        // await connection;
+        await connection;
         console.log("Connected to Database");
         console.log(`Listening on ${PORT}`);
     } catch (error) {
