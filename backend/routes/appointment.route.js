@@ -13,15 +13,15 @@ const { DoctorModel } = require("../models/doctors.model");
 const appointmentRouter = express.Router();
 appointmentRouter.use(express.json());
 
-appointmentRouter.get("/", async (req, res) => {
-    res.json({ "msg": "Appointment Routes" });
-});
+// appointmentRouter.get("/", async (req, res) => {
+//     res.json({ "msg": "Appointment Routes" });
+// });
 
 
 // *************************GET APPOINTMENT*************************
 
-appointmentRouter.get("/search/:id", async (req, res) => {
-    const id = req.params.id;
+appointmentRouter.get("/", async (req, res) => {
+    const id = req.query.id;
     try {
         const appointment = await AppointmentModel.findOne({ id });
         if (appointment) {

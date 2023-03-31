@@ -69,6 +69,7 @@ adminAuthRouter.post("/login", async (req, res) => {
             bcrypt.compare(password, admin.password, async (err, result) => {
                 if (result) {
                     const token = jwt.sign({ adminId: admin._id }, SECRET);
+                    req.headers.authorization = token;
                     res.json({ "msg": `${admin.first_name} has logged in successfully!!`, "admin": admin._id, "token": token });
                 }
                 else {
@@ -83,86 +84,86 @@ adminAuthRouter.post("/login", async (req, res) => {
 });
 
 
-// *************************DOCTORS LIST*************************
+// // *************************DOCTORS LIST*************************
 
-adminAuthRouter.get("/doctors", async (req, res) => {
-    const docId = req.query.docId;
-    try {
-        if (docId) {
-            const doctor = await DoctorModel.findOne({ id: docId });
-            const appointments = await AppointmentModel.find({ doctorId: docId });
-            if (doctor) {
-                res.json({ doctor, appointments });
-            }
-            else {
-                res.json({ "Error": "Invalid Doctor ID" });
-            }
-        }
-        else {
-            const doctorList = await DoctorModel.find();
-            res.json({ doctorList });
-        }
-    } catch (error) {
-        console.log(error);
-        res.json({ "Error": error });
-    }
-});
-
-
-// *************************APPOINTMENTS LIST*************************
-
-adminAuthRouter.get("/appointments", async (req, res) => {
-    const appointmentId = req.query.appointmentId;
-    try {
-        if (appointmentId) {
-            const appointment = await AppointmentModel.findOne({ id: appointmentId });
-            res.json({ appointment });
-        }
-        else {
-            const appointments = await AppointmentModel.find();
-            res.json({ appointments });
-        }
-    } catch (error) {
-        console.log(error);
-        res.json({ "Error": error });
-    }
-})
+// adminAuthRouter.get("/doctors", async (req, res) => {
+//     const docId = req.query.docId;
+//     try {
+//         if (docId) {
+//             const doctor = await DoctorModel.findOne({ id: docId });
+//             const appointments = await AppointmentModel.find({ doctorId: docId });
+//             if (doctor) {
+//                 res.json({ doctor, appointments });
+//             }
+//             else {
+//                 res.json({ "Error": "Invalid Doctor ID" });
+//             }
+//         }
+//         else {
+//             const doctorList = await DoctorModel.find();
+//             res.json({ doctorList });
+//         }
+//     } catch (error) {
+//         console.log(error);
+//         res.json({ "Error": error });
+//     }
+// });
 
 
-// // *************************ADD A NEW DOCTOR*************************
+// // *************************APPOINTMENTS LIST*************************
 
-// adminAuthRouter.post("/addDoctor", async(req, res) => {
-
+// adminAuthRouter.get("/appointments", async (req, res) => {
+//     const appointmentId = req.query.appointmentId;
+//     try {
+//         if (appointmentId) {
+//             const appointment = await AppointmentModel.findOne({ id: appointmentId });
+//             res.json({ appointment });
+//         }
+//         else {
+//             const appointments = await AppointmentModel.find();
+//             res.json({ appointments });
+//         }
+//     } catch (error) {
+//         console.log(error);
+//         res.json({ "Error": error });
+//     }
 // })
 
 
-// *************************UPDATE DOCTOR INFO*************************
+// // // *************************ADD A NEW DOCTOR*************************
 
-adminAuthRouter.patch("/updateDoctor/:id", async(req, res) => {
-    const payload = req.body;
-    const id = req.params.id;
-    try {
-        const doctor = await DoctorModel.findByIdAndUpdate(id, payload);
-        res.json({"msg": `Doctor info associated with id: ${id} has been updated successfully`})
-    } catch (error) {
-        console.log(error);
-        res.json({"Error": error.message});
-    }
-});
+// // adminAuthRouter.post("/addDoctor", async(req, res) => {
+
+// // })
 
 
-// *************************REMOVE A DOCTOR*************************
+// // *************************UPDATE DOCTOR INFO*************************
 
-adminAuthRouter.delete("/removeDoctor/:id", async(req, res) => {
-    const id = req.params.id;
-    try {
-        const doctor = await DoctorModel.findByIdAndDelete({id});
-        res.json({"msg": `Doctor info associated with id: ${id} has been removed successfully`})
-    } catch (error) {
-        console.log(error);
-        res.json({"Error": error.message});
-    }
-});
+// adminAuthRouter.patch("/updateDoctor/:id", async(req, res) => {
+//     const payload = req.body;
+//     const id = req.params.id;
+//     try {
+//         const doctor = await DoctorModel.findByIdAndUpdate(id, payload);
+//         res.json({"msg": `Doctor info associated with id: ${id} has been updated successfully`})
+//     } catch (error) {
+//         console.log(error);
+//         res.json({"Error": error.message});
+//     }
+// });
+
+
+// // *************************REMOVE A DOCTOR*************************
+
+// adminAuthRouter.delete("/removeDoctor/:id", async(req, res) => {
+//     const id = req.params.id;
+//     try {
+//         const doctor = await DoctorModel.findByIdAndDelete({id});
+//         res.json({"msg": `Doctor info associated with id: ${id} has been removed successfully`})
+//     } catch (error) {
+//         console.log(error);
+//         res.json({"Error": error.message});
+//     }
+// });
 
 // *************************EXPORT*************************
 

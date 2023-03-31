@@ -29,7 +29,7 @@ adminRouter.get("/", async (req, res) => {
 // *************************DOCTORS LIST*************************
 
 adminRouter.get("/doctors", async (req, res) => {
-    const docId = req.query.docId;
+    const docId = req.query.id;
     try {
         if (docId) {
             const doctor = await DoctorModel.findOne({ id: docId });
@@ -55,7 +55,7 @@ adminRouter.get("/doctors", async (req, res) => {
 // *************************APPOINTMENTS LIST*************************
 
 adminRouter.get("/appointments", async (req, res) => {
-    const appointmentId = req.query.appointmentId;
+    const appointmentId = req.query.id;
     try {
         if (appointmentId) {
             const appointment = await AppointmentModel.findOne({ id: appointmentId });
