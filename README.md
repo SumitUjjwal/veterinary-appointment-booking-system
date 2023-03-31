@@ -20,7 +20,7 @@
     - Get Doctors List(Method: GET): http://localhost:8080/appointment/doctors
     - Create Appointment(Method: POST): http://localhost:8080/appointment/create
 
-### Doctor
+### Doctor Authentication
     - Doctor Register(Method: POST): http://localhost:8080/doctor/register
     - Doctor Login(Method: POST): http://localhost:8080/doctor/login
 
