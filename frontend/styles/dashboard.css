@@ -43,6 +43,20 @@ body{
     text-align: center;
     border:1px solid #dee2e685;
 }
+select{
+    /* border: 2px solid orange; */
+    /* border-radius: 10px; */
+    cursor: pointer;
+    padding: 4px;
+    font-size: medium;
+    font-weight: bold;
+}
+option{
+   padding-top: 5px;
+   padding-bottom: 5px;
+   font-weight: bold;
+   font-size: medium;
+}
 
 .table .text_open{
     font-size: 14px;
