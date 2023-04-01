@@ -46,7 +46,7 @@ appointmentRouter.post("/create", async (req, res) => {
         res.json({ "msg": "Appointment Created successfully" });
     } catch (error) {
         console.log(error);
-        request.json({ "msg": "Error in creating appointment" });
+        res.json({ "msg": "Error in creating appointment" });
     }
 });
 
