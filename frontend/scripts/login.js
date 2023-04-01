@@ -1,28 +1,28 @@
 document.querySelector("#loginDoc").addEventListener("submit", loginFun);
 
-let url = "http://localhost:8080/doctor/login";
+let url = "http://localhost:8080/doctorAuth/login";
 
-async function getDocData() {
-  try {
-    let getData = await fetch(url, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+// async function getDocData() {
+//   try {
+//     let getData = await fetch("http://localhost:8080/appointment/doctors", {
+//       method: "GET",
+//       headers: {
+//         "Content-Type": "application/json",
+//       },
+//     });
 
-    if (getData.ok) {
-      let docData = await loginRequest.json();
-      console.log(docData);
-      return docData;
-    } else {
-      console.log({ err: "Something went wrong" });
-    }
-  } catch (err) {
-    console.log({ err: err.message });
-  }
-};
-getDocData()
+//     if (getData.ok) {
+//       let docData = await loginRequest.json();
+//       console.log(docData);
+//       return docData;
+//     } else {
+//       console.log({ err: "Something went wrong" });
+//     }
+//   } catch (err) {
+//     console.log({ err: err.message });
+//   }
+// };
+// getDocData()
 
 // Login
 async function loginFun(event) {
@@ -49,13 +49,13 @@ async function loginFun(event) {
       sessionStorage.setItem("accessToken", token.Access_Token);
       alert("Doctor Login Succcesfully");
 
-      let docId = getDocData().filter((elem)=> {
-        if(elem[email] == userObj["email"]) {
-          return elem.id;
-        }
-      })
+      // let docId = getDocData().filter((elem)=> {
+      //   if(elem[email] == userObj["email"]) {
+      //     return elem.id;
+      //   }
+      // })
 
-      sessionStorage.setItem("loginName", docId);
+      sessionStorage.setItem("loginName", token.docID);
       window.location.href = "../html/dashboard.html";
     } else {
       console.log({ err: "Something went wrong" });
