@@ -176,6 +176,7 @@ function showdata(appointmentList) {
       tr.append(td);
     }
 
+    
     tablebody.appendChild(tr);
   }
 }
