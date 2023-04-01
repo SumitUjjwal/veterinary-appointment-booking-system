@@ -2,8 +2,6 @@
 // *******************EXTERNAL MODULES*******************
 
 const express = require('express');
-// const bcrypt = require("bcrypt");
-// const jwt = require("jsonwebtoken");
 require("dotenv").config();
 
 // *******************CUSTOM MODULES*******************
@@ -12,8 +10,6 @@ const { AdminModel } = require("../models/admin.model");
 const { DoctorModel } = require("../models/doctors.model");
 const { AppointmentModel } = require("../models/appointment.models");
 
-
-// const SECRET = process.env.ADMIN_SECRET;
 
 const adminRouter = express.Router();
 adminRouter.use(express.json());
@@ -76,7 +72,7 @@ adminRouter.get("/appointments", async (req, res) => {
 
 // adminRouter.post("/addDoctor", async(req, res) => {
 
-// })
+// });
 
 
 // *************************UPDATE DOCTOR INFO*************************
