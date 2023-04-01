@@ -27,7 +27,7 @@ app.get('/', (req, res) => {
 app.use("/appointment", appointmentRouter);
 app.use("/adminAuth", adminAuthRouter);
 app.use("/doctor", doctorRouter);
-// app.use(authenticate);
+app.use(authenticate);
 app.use("/admin", adminRouter);
 
 
