@@ -18,12 +18,28 @@ doctorRouter.get("/:id", async (req, res) => {
     const doctorId = req.params.id;
     try {
         const appointments = await AppointmentModel.find({doctorId});
+        
         res.json(appointments);
+        console.log(appointments)
     } catch (error) {
         console.log(error);
         res.json({"Error": error.message});
     }
 });
+
+doctorRouter.patch('/status/:id',async(req, res) => {
+    const doctorId = req.params.id;
+    const status = req.body.status;
+    try{
+        const appointments = await AppointmentModel.find({doctorId});
+        console.log(appointments)
+        if(appointments.length === 0){
+            res.status(404).json({"Error": "No appointments found"});
+        }
+        appointments.status = status
+    }catch(err){console.log(err)} 
+
+})
 
 module.exports = {
     doctorRouter
