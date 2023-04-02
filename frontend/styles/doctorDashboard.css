@@ -56,6 +56,10 @@ td:last-child {
     transition: all 0.3s ease-in-out;
 }
 
+.btn-action:focus, .btn-action:active{
+    border: none;
+}
+
 .btn-action:hover {
     background-color: #FEDCC3;
     color: #EB5E28;
