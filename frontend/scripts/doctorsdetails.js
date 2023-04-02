@@ -9,7 +9,7 @@ let doctorcontainer = document.getElementById("doctor_details_container");
 //   location.href = "../index.html";
 // };
 const fetchdata = async () => {
-  const response = await fetch("http://localhost:8080/appointment/doctors");
+  const response = await fetch("https://drab-erin-moose-suit.cyclic.app/appointment/doctors");
   const data = await response.json();
   const doctors = data.doctors;
   append(doctors);

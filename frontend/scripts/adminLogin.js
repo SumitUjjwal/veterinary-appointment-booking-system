@@ -1,6 +1,6 @@
 document.querySelector("#loginDoc").addEventListener("submit", loginFun);
 
-let url = "http://localhost:8080/adminAuth/login";
+let url = "https://drab-erin-moose-suit.cyclic.app/adminAuth/login";
 
 // Login
 async function loginFun(event) {

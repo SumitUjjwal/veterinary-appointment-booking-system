@@ -1,4 +1,4 @@
-const baseURL = "http://localhost:8080";
+const baseURL = "https://drab-erin-moose-suit.cyclic.app";
 const thead = document.querySelector("thead");
 
 // *******************Fetch Doctor********************

@@ -1,4 +1,4 @@
-const baseURL = "http://localhost:8080";
+const baseURL = "https://drab-erin-moose-suit.cyclic.app";
 const docId = sessionStorage.getItem("loginId");
 const actionButtonConfirm = document.querySelector(".confirm");
 const actionButtonReject = document.querySelector(".reject");

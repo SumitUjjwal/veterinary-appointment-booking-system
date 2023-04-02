@@ -1,4 +1,4 @@
-let url = "http://localhost:8080/doctorAuth/register";
+let url = "https://drab-erin-moose-suit.cyclic.app/doctorAuth/register";
 
 let applyBtn = document.querySelector("#applyBtnForm");
 applyBtn.addEventListener("submit", applyDocFunc);
