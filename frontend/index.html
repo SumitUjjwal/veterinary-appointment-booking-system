@@ -23,6 +23,7 @@
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
+    <!-- <script src="scripts/navbar.js" defer></script> -->
   </head>
   <body>
     <header>
@@ -32,7 +33,16 @@
         <a href="html/doctorsdetails.html">Appointment</a>
         <a href="html/doctorApply.html">Doctor Apply</a>
         <a href="html/dashboard.html">DashBoard</a>
-        <a id="loginData" href="html/login.html">Login</a>
+        <div id="loginOpt">Login</div>
+        <div id="logindrop">
+          <a id="loginData" href="./html/login.html">Admin Login</a>
+          <a id="loginData" href="./html/login.html">Doctor Login</a>
+        </div>
+        <div id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
       <!-- <div class="container-fluid p-0 m-0 h-50">
         <nav class="navbar navbar-expand-lg bg-body-tertiary h-40 p-0">
@@ -569,5 +579,25 @@
   let logo = document.querySelector(".nvbr img");
   logo.addEventListener("click", () => {
     window.location.href = "./index.html";
+  });
+
+  let login = document.getElementById("loginOpt");
+
+  let logindrop = document.getElementById("logindrop");
+  login.addEventListener("click", () => {
+    if (logindrop.style.display == "none") {
+      logindrop.style.display = "flex";
+    } else {
+      logindrop.style.display = "none";
+    }
+  });
+
+  document.querySelector("#hamburger").addEventListener("click", () => {
+    let x = document.querySelector("#nav-menu>div:nth-child(2)");
+    if (x.style.display === "flex") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "flex";
+    }
   });
 </script>

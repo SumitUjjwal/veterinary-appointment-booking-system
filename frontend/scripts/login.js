@@ -2,28 +2,6 @@ document.querySelector("#loginDoc").addEventListener("submit", loginFun);
 
 let url = "http://localhost:8080/doctorAuth/login";
 
-// async function getDocData() {
-//   try {
-//     let getData = await fetch("http://localhost:8080/appointment/doctors", {
-//       method: "GET",
-//       headers: {
-//         "Content-Type": "application/json",
-//       },
-//     });
-
-//     if (getData.ok) {
-//       let docData = await loginRequest.json();
-//       console.log(docData);
-//       return docData;
-//     } else {
-//       console.log({ err: "Something went wrong" });
-//     }
-//   } catch (err) {
-//     console.log({ err: err.message });
-//   }
-// };
-// getDocData()
-
 // Login
 async function loginFun(event) {
   event.preventDefault();
@@ -49,14 +27,9 @@ async function loginFun(event) {
       sessionStorage.setItem("accessToken", token.Access_Token);
       alert("Doctor Login Succcesfully");
 
-      // let docId = getDocData().filter((elem)=> {
-      //   if(elem[email] == userObj["email"]) {
-      //     return elem.id;
-      //   }
-      // })
-
       sessionStorage.setItem("loginId", token.docID);
       sessionStorage.setItem("docName", token.docName);
+      document.getElementById("loginOpt").textContent = token.docName;
       window.location.href = "../html/doctorDashboard.html";
     } else {
       console.log({ err: "Something went wrong" });

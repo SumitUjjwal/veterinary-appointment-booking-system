@@ -27,6 +27,7 @@ async function applyDocFunc(event) {
 
     if (applyRequest.ok) {
       alert("Doctor Application Registered");
+      window.location.href = "../html/doctorsdetails.html";
     } else {
       console.log({ err: "Something went wrong" });
     }
