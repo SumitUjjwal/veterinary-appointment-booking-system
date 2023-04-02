@@ -48,7 +48,7 @@ form.addEventListener("submit", async (event) => {
     res = await res.json();
     if ((res.msg = "Appointment Created successfully")) {
       alertMsg("Appointment Created. Will connect with you soon", "success");
-      window.location.href = "../index.html";
+      // window.location.href = "../index.html";
     }else{
       alertMsg("Appointment Not Created", "fail");
     }

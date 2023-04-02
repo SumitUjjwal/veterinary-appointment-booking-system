@@ -146,7 +146,8 @@ const action = async (event) => {
     const request = await fetch(`${baseURL}/doctor/status/${id}`, {
         method: "PATCH",
         headers: {
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
+            "authorization": `${sessionStorage.getItem("accessToken")}`
         },
         body: JSON.stringify(obj)
     });
