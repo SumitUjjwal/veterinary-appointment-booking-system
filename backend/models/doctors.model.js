@@ -30,7 +30,7 @@ const doctorSchema = mongoose.Schema({
     address: { type: String, required: true },
     fees: { type: Number, required: true },
     slots: { type: Number, required: true, default: 5 },
-    status: { type: String, required: true, default: "Pending" },
+    status: { type: String, required: true, default: "pending" },
     password: { type: String, required: true }
 });
 
