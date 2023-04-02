@@ -38,7 +38,7 @@ form.addEventListener("submit", async (event) => {
       appointmentDate,
     };
 
-    let res = await fetch("http://localhost:8080/appointment/create", {
+    let res = await fetch("https://drab-erin-moose-suit.cyclic.app/appointment/create", {
       method: "POST",
       body: JSON.stringify(objdata),
       headers: {
