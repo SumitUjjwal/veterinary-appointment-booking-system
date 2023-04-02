@@ -56,7 +56,8 @@ async function loginFun(event) {
       // })
 
       sessionStorage.setItem("loginId", token.docID);
-      window.location.href = "../html/dashboard.html";
+      sessionStorage.setItem("docName", token.docName);
+      window.location.href = "../html/doctorDashboard.html";
     } else {
       console.log({ err: "Something went wrong" });
     }
