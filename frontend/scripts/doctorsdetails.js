@@ -1,13 +1,13 @@
-import Navbar from "./components/navbar.component.js";
+// import Navbar from "./components/navbar.component.js";
 import { alertMsg } from "./components/alertmsg.component.js";
 
-let header = document.querySelector("header");
-header.innerHTML = Navbar();
+// let header = document.querySelector("header");
+// header.innerHTML = Navbar();
 
 let doctorcontainer = document.getElementById("doctor_details_container");
-document.querySelector("#logo").onclick = () => {
-  location.href = "../index.html";
-};
+// document.querySelector("#logo").onclick = () => {
+//   location.href = "../index.html";
+// };
 const fetchdata = async () => {
   const response = await fetch("http://localhost:8080/appointment/doctors");
   const data = await response.json();

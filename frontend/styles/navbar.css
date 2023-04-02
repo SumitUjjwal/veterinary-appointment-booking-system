@@ -60,15 +60,56 @@
 .nvbr a:nth-child(even):hover::after {
   width: 100%;
 }
-.nvbr a:last-child {
+#loginOpt {
   background: linear-gradient(90deg ,#d9822b, #e15a53);
   color: #fff;
   padding: 6px 20px;
+  cursor: pointer;
 }
-.nvbr a:last-child:hover {
+#loginOpt:hover {
   background: linear-gradient(90deg, #e15a53, #d9822b);
   color: #fff;
 }
-.nvbr a:last-child:hover::after {
-  width: 0%;
+#logindrop {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border: 1px solid #d9822b;
+  padding: 0 10px;
+  position: absolute;
+  z-index: 9999;
+  top: 68px;
+  right: 87px;
+  display: none;
+}
+#logindrop a:first-child {
+  border-bottom: 1px solid #d9822b;
+  /* margin: 20px 0; */
+}
+#hamburger {
+  display: none;
+  flex-direction: column;
+  height: 24px;
+  justify-content: space-between;
+  align-items: center;
+  /* margin-right: 36px; */
+}
+#hamburger span {
+  width: 30px;
+  height: 4px;
+  background-color: #d9822b;
+}
+
+@media screen and (min-width: 0px) and (max-width: 640px) {
+  .nvbr {
+    height: 60px;
+  }
+  #hamburger {
+    display: flex;
+    position: absolute;
+    right: 20px;
+  }
+  .nvbr img,.nvbr a,.nvbr #logindrop, .nvbr #loginOpt {
+    display: none;
+  } 
 }
