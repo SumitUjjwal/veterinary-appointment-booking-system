@@ -1,0 +1,62 @@
+/* Global styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Table styles */
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: 80%;
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+th {
+    background-color: #FEDCC3;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #FCE0C5;
+}
+
+td:last-child {
+    text-align: center;
+}
+
+.status-pending {
+    color: #EB5E28;
+    font-weight: bold;
+}
+
+.status-approved {
+    color: green;
+    font-weight: bold;
+}
+
+.btn-action {
+    width: 100px;
+    background-color: #EB5E28;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    padding: 5px 10px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-action:hover {
+    background-color: #FEDCC3;
+    color: #EB5E28;
+}
