@@ -3,7 +3,13 @@ const thead = document.querySelector("thead");
 
 // *******************Fetch Doctor********************
 const fetchDoctors = async () => {
-    const request = await fetch(`${baseURL}/admin/doctors`);
+    const request = await fetch(`${baseURL}/admin/doctors`, {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+            "authorization": `${sessionStorage.getItem("accessToken")}`
+        }
+    });
     const response = await request.json();
     thead.innerHTML = `
         <tr>
@@ -28,7 +34,13 @@ fetchDoctors();
 
 // *******************Fetch Appointments********************
 const fetchAppointments = async() => {
-    const request = await fetch(`${baseURL}/admin/appointments`);
+    const request = await fetch(`${baseURL}/admin/appointments`, {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+            "authorization": `${sessionStorage.getItem("accessToken")}`
+        }
+    });
     const response = await request.json();
     thead.innerHTML = `
         <tr>
@@ -50,7 +62,13 @@ const fetchAppointments = async() => {
 
 // *******************Fetch Applications********************
 const fetchApplications = async() => {
-    const request = await fetch(`${baseURL}/admin/doctors`);
+    const request = await fetch(`${baseURL}/admin/doctors`, {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+            "authorization": `${sessionStorage.getItem("accessToken")}`
+        }
+    });
     const response = await request.json();
     thead.innerHTML = `
         <tr>
@@ -166,7 +184,8 @@ const action = async (event) => {
     const request = await fetch(`${baseURL}/admin/updateDoctor/${id}`, {
         method: "PATCH",
         headers: {
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
+            "authorization": `${sessionStorage.getItem("accessToken")}`
         },
         body: JSON.stringify(obj)
     });
