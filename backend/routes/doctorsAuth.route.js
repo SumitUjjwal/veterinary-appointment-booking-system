@@ -50,7 +50,7 @@ doctorAuthRouter.post("/login", async (req, res) => {
             bcrypt.compare(password, hashed_pass, (err, result) => {
                 if (result) {
                     const token = jwt.sign({ Doctorid: Doctor[0]._id }, process.env.secret);
-                    res.send({ "msg": "Login Successfull", "Access_Token": token, "docID": Doctor[0]._id });
+                    res.send({ "msg": "Login Successfull", "Access_Token": token, "docID": Doctor[0]._id, docName: Doctor[0].first_name });
                 } else {
                     res.send("Wrong Credntials");
                 }

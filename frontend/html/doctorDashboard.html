@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doctor Appointment Dashboard</title>
+    <link rel="stylesheet" href="../styles/doctorDashboard.css" />
+    <link rel="stylesheet" href="../styles/navbar.css">
+</head>
+
+<body>
+    <header>
+        <div class="nvbr">
+            <img src="../assets/images/Pet-Vet logo.png" alt="" />
+            <a href="#" onclick="pendingAppointments()">New Appointments</a>
+            <a href="#" onclick="confirmAppointments()">Current Appointments</a>
+            <a href="#" onclick="getAppointments()">All Appointments</a>
+            <a href="#" id="docName">Doctor Name</a>
+            <a href="#" onclick="logout()">Logout</a>
+        </div>
+    </header>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>Appointment ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Date</th>
+                    <th>Pet Type</th>
+                    <th>Pet Issue</th>
+                    <th>Current Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </main>
+</body>
+
+<script src="../scripts/doctorDashboard.js"></script>
+
+</html>

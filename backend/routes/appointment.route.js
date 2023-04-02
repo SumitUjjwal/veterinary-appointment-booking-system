@@ -20,7 +20,7 @@ appointmentRouter.use(express.json());
 appointmentRouter.get("/", async (req, res) => {
     const id = req.query.id;
     try {
-        const appointment = await AppointmentModel.findOne({ id });
+        const appointment = await AppointmentModel.find({ doctorId: id });
         if (appointment) {
             res.json({ appointment });
         }
