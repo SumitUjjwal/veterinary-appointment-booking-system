@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="../styles/doctorDashboard.css" />
+    <link rel="stylesheet" href="../styles/navbar.css">
+</head>
+
+<body>
+    <header>
+        <div class="nvbr">
+            <img src="../assets/images/Pet-Vet logo.png" alt="" />
+            <a href="#" onclick="fetchDoctors()">Doctors</a>
+            <a href="#" onclick="fetchAppointments()">Appointments</a>
+            <a href="#" onclick="fetchApplications()">Applications</a>
+            <a href="#" id="adminName">Admin</a>
+            <a href="#" onclick="logout()">Logout</a>
+        </div>
+    </header>
+    <main>
+        <table>
+            <thead>
+                <!-- <tr>
+                    <th>Doctor ID</th>
+                    <th>Name</th>
+                    <th>Specialization</th>
+                    <th>Experience</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Address</th>
+                    <th>Fee</th>
+                    <th>Slots</th>
+                    <th>Status</th>
+                </tr>
+                <tr>
+                    <th>Doctor ID</th>
+                    <th>first_name + last_name</th>
+                    <th>specialization</th>
+                    <th>experience</th>
+                    <th>email</th>
+                    <th>phone</th>
+                    <th>address</th>
+                    <th>fees</th>
+                    <th>slots</th>
+                    <th>status</th>
+                </tr> -->
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <div id="edit-form-container"></div>
+    </main>
+</body>
+
+<script src="../scripts/adminDashboard.js"></script>
+
+</html>
