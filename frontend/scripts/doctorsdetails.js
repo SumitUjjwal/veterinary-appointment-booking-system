@@ -57,7 +57,7 @@ const append = (doctors) => {
     booknow.onclick = () => {
       if (element.slots > 0) {
         localStorage.setItem("doctor_id", JSON.stringify(element._id));
-        window.location.href = "../html/doctorappointment.html";
+        window.location.href = "../html/doctorAppointment.html";
       } else {
         alertMsg("uh oh! slots are not available please try tomorrow", "error");
       }
