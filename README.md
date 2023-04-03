@@ -8,12 +8,13 @@ The PetVet is an online application that allows pet owners to schedule appointme
 
 ### Tech Stacks used
 
-- Frontend: - HTML
-            - CSS
-            - JavaScript
-            - Bootstrap
-            
-- Backend:  - NodeJS
+- Frontend: 
+    - HTML
+    - CSS
+    - JavaScript
+    - Bootstrap
+
+ Backend:  - NodeJS
             - ExpressJS
             - MongoDB
             - NPM Packages
