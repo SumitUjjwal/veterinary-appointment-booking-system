@@ -27,7 +27,7 @@ The PetVet is an online application that allows pet owners to schedule appointme
 ## API Endpoints
 
 ### Admin Authentication
-    - Admin Register: `/adminAuth/register`
+    - Admin Register: /adminAuth/register
     - Admin Login: /adminAuth/login
 
 ### Admin Route
@@ -51,3 +51,10 @@ The PetVet is an online application that allows pet owners to schedule appointme
 ### Doctor Route
     - Get Appointments List(Method: GET): /doctor/:id
     - Update Appointment Status(Method: PATCH): /doctor/status/:id
+
+## Contributors
+- [Sumit Ujjwal](https://github.com/SumitUjjwal)
+- [Pranjal Jain](https://github.com/pranjaljain275)
+- [Altaf Khan](https://github.com/eraltafs)
+- [Suraj Patil](https://github.com/srjizhere)    
+- [Shiva Saraswat](https://github.com/shivam5665)   
