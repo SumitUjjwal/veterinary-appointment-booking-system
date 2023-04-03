@@ -6,6 +6,13 @@
 
 The PetVet is an online application that allows pet owners to schedule appointments with veterinarians at their convenience. The system simplifies the process of booking appointments and provides a platform for pet owners to communicate with veterinary professionals regarding their pet's health. The system aims to improve the overall quality of care provided to pets by making it easier for pet owners to access veterinary services.
 
+### Objectives of the project:
+
+- To provide an easy-to-use platform for pet owners to book appointments with veterinary professionals.
+- To improve the efficiency of the appointment booking process.
+- To increase the accessibility of veterinary services.
+- To provide a centralized system for managing appointments and patient information.
+
 ### Tech Stacks used
 
 - Frontend: 
