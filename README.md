@@ -14,10 +14,11 @@ The PetVet is an online application that allows pet owners to schedule appointme
     - JavaScript
     - Bootstrap
 
- Backend:  - NodeJS
-            - ExpressJS
-            - MongoDB
-            - NPM Packages
+- Backend:  
+    - NodeJS
+    - ExpressJS
+    - MongoDB
+    - NPM Packages
 
 ### Work Flow
 
@@ -26,7 +27,7 @@ The PetVet is an online application that allows pet owners to schedule appointme
 ## API Endpoints
 
 ### Admin Authentication
-    - Admin Register: /adminAuth/register
+    - Admin Register: `/adminAuth/register`
     - Admin Login: /adminAuth/login
 
 ### Admin Route
